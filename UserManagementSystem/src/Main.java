@@ -31,6 +31,18 @@ public class Main {
 		} catch (UserNotFoundException e) {
 			System.out.println(e.getMessage());
 		}
+		
+		// 삭제 요청하기
+		um.requestDeleteQueue("1");
+		um.requestDeleteQueue("4"); // 존재하지 않음으로 예외 처리 될 것임.
+		
+		try {
+			um.DeleteQueue();
+		} catch (UserNotFoundException e) {
+			System.out.println(e.getMessage());
+		}
+		// 남은 사용자를 확인하여 사용자가 삭제되었는지 확인하기
+		um.showAllUser();
  	}
 
 }
