@@ -1,14 +1,14 @@
 
-public class User {
+public class User<T> {
 // 제네릭 User 클래스
 	
 	private int age;
-	private String id;
+	private T id;
 	private String name;
 	private String email;
 	
 	// 생성자 정의
-	public User (String id, int age, String name, String email) {
+	public User (T id, int age, String name, String email) {
 		this.name = name;
 		this.age= age;
 		this.email = email;
@@ -16,7 +16,7 @@ public class User {
 	}
 	
 	// getter 함수
-	public String getId() {
+	public T getId() {
 		return id;
 	}
 	
